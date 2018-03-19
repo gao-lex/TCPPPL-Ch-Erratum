@@ -63,3 +63,17 @@ default:
 译文（错误）：a++++1 的意思是 (a++)+1 
 
 原文：a+++1 means (a ++) + 1
+
+---
+* P310：struct类不完整
+```c++
+template<typename F>
+struct Final_action {
+      Final_action(F f): clean{f} {}
+      ~Final_action() { clean(); }
+      F clean;
+      Final_action(const Final_action&) =delete;       // not meant to be copied (§3.3.4, §17.6.4)
+      Final_action& operator=(const Final_action&) =delete;
+};
+```
+
