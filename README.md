@@ -77,3 +77,21 @@ struct Final_action {
 };
 ```
 
+---
+* P340：函数调用中参数太少
+
+```c++
+namespace Parser {
+	double expr(bool);
+	double term(bool);
+	double prim(bool);
+}
+
+double val = Parser::expr(true);
+
+double Parser::expr(bool b)
+{
+	//...
+}
+```
+
