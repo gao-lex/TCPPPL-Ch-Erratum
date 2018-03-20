@@ -93,5 +93,16 @@ double Parser::expr(bool b)
 {
 	//...
 }
+
 ```
 
+* P343：缺少分号
+
+```c++
+namespace N {
+	struct S { int i; };
+	void g(S);
+	void f(S);
+	void h(int);
+}
+```
