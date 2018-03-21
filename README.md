@@ -112,3 +112,7 @@ namespace N {
 |内容|代码|
 |:---:|:---:|
 |无名名字空间|namespace{/**/}|
+
+---
+
+* P373：`dc.h`中漏了`using namespace std;`
