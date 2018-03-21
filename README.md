@@ -116,3 +116,4 @@ namespace N {
 ---
 
 * P373：`dc.h`中漏了`using namespace std;`
+* P373：`dc.h`Token_stream的构造函数、析构函数名错误
