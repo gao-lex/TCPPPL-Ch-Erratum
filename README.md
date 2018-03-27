@@ -117,3 +117,11 @@ namespace N {
 
 * P373：`dc.h`中漏了`using namespace std;`
 * P373：`dc.h`Token_stream的构造函数、析构函数名错误
+
+---
+
+* P404：函数参数类型错误
+```c++
+//void char_rep(char s[],in max);错误
+void char_rep(char s[],int max);
+```
