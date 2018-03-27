@@ -122,6 +122,6 @@ namespace N {
 
 * P404：函数参数类型错误
 ```c++
-//void char_rep(char s[],in max);错误
-void char_rep(char s[],int max);
+//void char_rep(char s[],in max) const;//错误
+void char_rep(char s[],int max) const;
 ```
