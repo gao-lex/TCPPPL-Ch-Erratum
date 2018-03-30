@@ -128,13 +128,24 @@ void char_rep(char s[],int max) const;
 
 ---
 
-* P419：声明类型错误
-```
+* P419：声明类型错误+指针使用错误
+```c++
+
+class Nonlocal{
+public:
+    void destroy(){this->~Nonlocal();}
+
+private:
+    ~Nonlocal(){};
+};
+
 void user()
 {
 	//...
 	//X* p = new Nonlocal; //错误的译文
 	Nonlocal *p = new Nonlocal;//正确的原文
 	//...
+    //p.destory();//错误
+    p->destory();//正确
 }
 ```
