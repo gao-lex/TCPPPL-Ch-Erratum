@@ -21,8 +21,8 @@ singed char sc = -140
 P166：Map类函数声明形参错误
 template <class K,class V>
 class Map{
-    public:
-        V& operator[](const K& k);//返回与键值k对应的值
+	public:
+		V& operator[](const K& k);//返回与键值k对应的值
 }
 ```
 
@@ -33,10 +33,10 @@ class Map{
 ``` C++
 ostream& operator<<(ostream& os, Point p)
 {
-     //中文翻译版错误如下
-     //return os << '{' << p[i].x << ',' << p[i].y << '}';
-     //英文原文是正确的
-     return os << '{' << p.x << ',' << p.y << '}';
+	 //中文翻译版错误如下
+	 //return os << '{' << p[i].x << ',' << p[i].y << '}';
+	 //英文原文是正确的
+	 return os << '{' << p.x << ',' << p.y << '}';
 }
 ```
 
@@ -46,14 +46,14 @@ ostream& operator<<(ostream& os, Point p)
 
 ``` C++
 default:
-    if (isalpha(ch)) {
-        //string_value = ch; 错误的版本
-        ct.string_value = ch;//正确的版本
-        while (ip->get(ch) && isalnum(ch))
-            ct.string_value += ch;
-        ip->putback(ch);
-        return ct = {Kind::name};
-    }
+	if (isalpha(ch)) {
+		//string_value = ch; 错误的版本
+		ct.string_value = ch;//正确的版本
+		while (ip->get(ch) && isalnum(ch))
+			ct.string_value += ch;
+		ip->putback(ch);
+		return ct = {Kind::name};
+	}
 ```
 
 ---
@@ -133,10 +133,10 @@ void char_rep(char s[],int max) const;
 
 class Nonlocal{
 public:
-    void destroy(){this->~Nonlocal();}
+	void destroy(){this->~Nonlocal();}
 
 private:
-    ~Nonlocal(){};
+	~Nonlocal(){};
 };
 
 void user()
@@ -145,7 +145,7 @@ void user()
 	//X* p = new Nonlocal; //错误的译文
 	Nonlocal *p = new Nonlocal;//正确的原文
 	//...
-    //p.destory();//错误
-    p->destory();//正确
+	//p.destory();//错误
+	p->destory();//正确
 }
 ```
