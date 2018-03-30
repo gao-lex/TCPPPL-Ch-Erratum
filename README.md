@@ -125,3 +125,16 @@ namespace N {
 //void char_rep(char s[],in max) const;//错误
 void char_rep(char s[],int max) const;
 ```
+
+---
+
+* P419：声明类型错误
+```
+void user()
+{
+	//...
+	//X* p = new Nonlocal; //错误的译文
+	Nonlocal *p = new Nonlocal;//正确的原文
+	//...
+}
+```
