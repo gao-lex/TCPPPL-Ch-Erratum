@@ -149,3 +149,19 @@ void user()
 	p->destory();//正确
 }
 ```
+
+---
+
+* P437：拷贝构造函数缺少参数名
+
+```c++
+class X{
+	string s;
+	string s2;
+	vector<int> v;
+	
+	//译文漏掉了参数a
+	X(const X& a):s{a.s},v{a.v}{}
+	//...
+}
+```
