@@ -165,3 +165,11 @@ class X{
 	//...
 }
 ```
+
+---
+
+* P441：变量名搞混
+
+> 译文：为tmp赋值后，我们就有了b的值的两个副本
+
+> 原文：After assigning to a, we have two copies of b’s value.
